@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카카오계정 로그인</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F6F6F6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      background: #FFFFFF;
+      border: 1px solid #E5E5E5;
+      border-radius: 8px;
+      padding: 40px 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      color: #191600;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-badge {
+      background: #FEE500;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .input-field {
+      width: 100%;
+      height: 48px;
+      border: 1px solid #CCCCCC;
+      border-radius: 4px;
+      padding: 0 14px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      outline: none;
+    }
+    .input-field:focus {
+      border-color: #191600;
+    }
+    .submit-btn {
+      width: 100%;
+      height: 48px;
+      background: #FEE500;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #191600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover {
+      background: #EED500;
+    }
+    .info-text {
+      font-size: 11px;
+      color: #999999;
+      margin-top: 24px;
+      line-height: 1.5;
+    }
+    .demo-notice {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      color: #1D4ED8;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <span style="font-weight: bold; color: #191600;">kakao</span>
+    </div>
+    
+    <div class="demo-notice">
+      💡 <strong>맑은숨 테스트 모드</strong>입니다.<br>
+      실제 비밀번호를 입력하지 마시고, 바로 로그인 버튼을 눌러주세요.
+    </div>
+
+    <input type="text" class="input-field" placeholder="카카오메일 아이디, 이메일, 전화번호" value="guardian@kakao.com" readonly>
+    <input type="password" class="input-field" placeholder="비밀번호" value="••••••••" readonly>
+    
+    <button class="submit-btn" onclick="submitLogin()">로그인</button>
+    
+    <div class="info-text">
+      로그인 시 맑은숨 서비스 이용약관 및 개인정보 처리방침에 동의하는 것으로 간주됩니다.
+    </div>
+  </div>
+
+  <script>
+    function submitLogin() {
+      if (window.opener) {
+        window.opener.postMessage({
+          type: 'MOCK_LOGIN_SUCCESS',
+          provider: 'kakao',
+          username: '지우'
+        }, '*');
+      }
+      window.close();
+    }
+  </script>
+</body>
+</html>
