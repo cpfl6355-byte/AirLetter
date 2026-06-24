@@ -1,23 +1,23 @@
 const theme = {
   colors: {
-    good: '#16A97A',
-    moderate: '#D4920A',
-    unhealthy: '#E06A10',
-    hazardous: '#C72828',
+    good: '#70A386',
+    moderate: '#D69E6B',
+    unhealthy: '#C45131',
+    hazardous: '#9E321E',
   },
   bg: {
-    primary: '#E8F4FD',
-    secondary: '#F0F8FF',
-    card: 'rgba(255, 255, 255, 0.92)',
-    cardHover: 'rgba(255, 255, 255, 1)',
+    primary: '#FAF8F6',
+    secondary: '#F5F1EE',
+    card: '#FFFFFF',
+    cardHover: '#FCFBFB',
   },
   text: {
-    primary: '#0D2D4A',
-    secondary: '#2E6088',
-    muted: '#6A9BB8',
+    primary: '#5C3D35',
+    secondary: '#7D6560',
+    muted: '#A89895',
   },
-  accent: '#1E90D6',
-  accentGlow: 'rgba(30, 144, 214, 0.22)',
+  accent: '#C45131',
+  accentGlow: 'rgba(196, 81, 49, 0.2)',
   spacing: {
     xs: '4px',
     sm: '8px',
@@ -33,8 +33,8 @@ const theme = {
     full: '9999px',
   },
   shadow: {
-    card: '0 4px 24px rgba(30,100,180,0.12)',
-    glow: '0 0 24px rgba(30, 144, 214, 0.22)',
+    card: '0 4px 24px rgba(92, 61, 53, 0.06)',
+    glow: '0 0 24px rgba(196, 81, 49, 0.15)',
   },
   transition: {
     fast: '0.15s ease',

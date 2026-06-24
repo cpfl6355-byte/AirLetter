@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    background: linear-gradient(160deg, #C8E8FA 0%, #E8F4FD 50%, #D6EEFB 100%);
+    background: linear-gradient(160deg, #EBE5E2 0%, #FAF8F6 50%, #E3DDD9 100%);
   }
 
   /* Animations */
@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
     appearance: none;
     height: 6px;
     border-radius: ${({ theme }) => theme.radius.full};
-    background: rgba(30,144,214,0.12);
+    background: rgba(196, 81, 49, 0.12);
     outline: none;
     cursor: pointer;
   }
@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: linear-gradient(135deg, ${({ theme }) => theme.accent}, #0A6EBD);
+    background: linear-gradient(135deg, ${({ theme }) => theme.accent}, #A03D22);
     box-shadow: 0 0 8px ${({ theme }) => theme.accentGlow};
     cursor: pointer;
     transition: transform ${({ theme }) => theme.transition.fast};

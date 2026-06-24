@@ -16,7 +16,7 @@ export function useAirData(region: string) {
     setAirData(prev => ({ ...prev, loading: true }));
     const sidoName = REGION_MAP[region] || '서울';
     const alarms = await fetchAlarmData(sidoName);
-    const resolved = alarmsToAirData(alarms);
+    const resolved = alarmsToAirData(alarms, region);
     setAirData({
       ...resolved,
       loading: false,

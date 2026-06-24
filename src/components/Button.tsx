@@ -30,13 +30,14 @@ export const Button = styled.button<{ $variant?: 'primary' | 'ghost'; $size?: 's
     }
   `
       : `
-    background: linear-gradient(135deg, ${theme.accent}, #0A6EBD);
+    background: linear-gradient(135deg, ${theme.accent}, #A03D22);
     color: #fff;
     box-shadow: 0 4px 16px ${theme.accentGlow};
 
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 24px ${theme.accentGlow};
+      background: linear-gradient(135deg, #B34426, #8E3018);
     }
 
     &:active {

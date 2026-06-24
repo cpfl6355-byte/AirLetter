@@ -6,6 +6,11 @@ export interface UserProfile {
   age: number;
   region: string;
   conditions: HealthCondition[];
+  respiratoryType?: 'asthma' | 'copd' | 'other' | 'none';
+  medications?: string[];
+  guardianName?: string;
+  guardianPhone?: string;
+  parentsRegion?: string;
 }
 
 export interface AlarmItem {
@@ -36,12 +41,17 @@ export interface HealthRecord {
   date: string;
   symptoms: string[];
   severity: number;
+  inhalerCount?: number;
 }
 
 export interface NotificationSettings {
   alert: boolean;
   report: boolean;
   reminder: boolean;
+  accessibilityMode?: boolean;
+  ttsEnabled?: boolean;
+  medicationAlertTime?: string;
+  medicationAlertOnWarning?: boolean;
 }
 
 export interface GuideItem {
@@ -50,4 +60,4 @@ export interface GuideItem {
   desc: string;
 }
 
-export type ScreenId = 'home' | 'profile' | 'risk' | 'guide' | 'record' | 'settings';
+export type ScreenId = 'home' | 'status' | 'health' | 'facilities' | 'profile' | 'risk' | 'guide' | 'record' | 'settings' | 'guardian-login' | 'guardian-invite' | 'elder-welcome';
